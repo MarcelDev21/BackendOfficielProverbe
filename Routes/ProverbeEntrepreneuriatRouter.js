@@ -3,7 +3,7 @@ const router = require('express').Router()
 
 router.get('/getAllProverbesEntrepreneurait', ProverbeEntrepreneuriatController.getAllProverbesEntrepreneurait)
 router.post('/createProverbesEntrepreneuriat', ProverbeEntrepreneuriatController.createProverbesEntrepreneuriat)
-router.put('/modifyProverbeEnrtrepreneuriat', ProverbeEntrepreneuriatController.modifyProverbeEnrtrepreneuriat)
-router.post('/deleteProverbeEntrepreneuriat', ProverbeEntrepreneuriatController.deleteProverbeEntrepreneuriat)
+router.put('/modifyProverbeEnrtrepreneuriat/:id', ProverbeEntrepreneuriatController.modifyProverbeEnrtrepreneuriat)
+router.delete('/deleteProverbeEntrepreneuriat', ProverbeEntrepreneuriatController.deleteProverbeEntrepreneuriat)
 
 module.exports = router
