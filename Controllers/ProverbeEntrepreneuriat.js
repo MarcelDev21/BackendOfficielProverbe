@@ -24,12 +24,8 @@ module.exports= {
         const {id} = req.params
         console.log(req.params.id)
         try {
-            
-            //const findAboutID = await ProverbeEntrepreneuriat.findById({})
-            console.log(id)
-            console.log("tes")
-            //const updataData = await ProverbeEntrepreneuriat.findByIdAndUpdate(id, {title: req.body.title}, {new : true})
-            //res.status(202).json(updataData)
+            const updataData = await ProverbeEntrepreneuriat.findByIdAndUpdate(id, {title: req.body.title}, {new : true})
+            res.status(202).json(updataData)
         } catch (error) {
             res.status(404).json(error)
         }
@@ -40,7 +36,7 @@ module.exports= {
         console.log(req.params.id)
         try {
             const deleteObject = await ProverbeEntrepreneuriat.findByIdAndDelete(id)
-            res.status(202).json("supprimer avec succès")
+            res.status(202).json(deleteObject)
         } catch (error) {
             res.status(404).json("error")
         }
